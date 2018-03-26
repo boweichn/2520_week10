@@ -19,7 +19,7 @@ hbs.registerHelper('message', (text) => {
 	return text.toUpperCase()
 })
 
-app.use((request, response, next) => {
+/*app.use((request, response, next) => {
 	// response.render('maint.hbs', {});
 	var time = new Date().toString();
 	var log = `${time}: ${request.method} ${request.url}`;
@@ -29,7 +29,7 @@ app.use((request, response, next) => {
 		}
 	});
 
-});
+});*/
 
 app.get('/', (request, response) => {
 	response.send({
@@ -57,6 +57,6 @@ app.get('/404', (request, response) => {
 })
 
 
-app.listen(port, () => {
+app.listen(port, () => {`
 	console.log(`Server is up on the port ${port}`);
 });
